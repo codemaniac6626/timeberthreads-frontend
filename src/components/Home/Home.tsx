@@ -23,7 +23,7 @@ export default function Home() {
             <Button
               variant="outline"
               color="#ffffff"
-              size="xl"
+              size="lg"
               className={"control"}
               mt={20}
               onClick={() => navigate("/explore")}
