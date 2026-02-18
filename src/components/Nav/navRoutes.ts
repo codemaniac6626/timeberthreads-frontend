@@ -1,19 +1,14 @@
 export const navRoutes = [
-    {
-      display: "Home",
-      path: "/home"
-    },
-    {
-      display: "Explore",
-      path: "/explore"
-    },
-    {
-      display: "Contribute",
-      path: "/contribute"
-    },
-    {
-      display: "Contact-Us",
-      path: "/contact-us"
-    },
-  
-  ]
+  {
+    display: "Home",
+    path: "/home",
+  },
+  {
+    display: "Explore",
+    path: "/explore",
+  },
+  {
+    display: "About Us",
+    path: "/about-us",
+  },
+];

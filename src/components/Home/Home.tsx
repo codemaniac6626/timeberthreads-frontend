@@ -1,43 +1,38 @@
-import { useAppSelector } from "../../store/hooks"
+// import { useAppSelector } from "../../store/hooks";
 // import { setUserState } from "../../store/slices/userSlice"
+import { Button, Container, Text } from "@mantine/core";
+import "./Home.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
-
-  const email = useAppSelector(
-    (state) => state.user.email
-  )
-
-  const loggedIn = useAppSelector(
-    (state) => state.user.loggedIn
-  )
-
-  const message = useAppSelector(
-    (state) => state.user.message
-  )
-
-  // const dispatch = useAppDispatch()
-
-  // // dispatch(setUserState({loading: false}))
-
+  const navigate = useNavigate();
   return (
-    <div>
-      {loggedIn && (
-        <div>
-          {email}
-        </div>
-      )}
+    <div className={"root"}>
+      <Container size="ls" px={80}>
+        <div className={"inner"}>
+          <div className={"content"}>
+            <div className="title">Buy One Plant One</div>
 
-      {message && (
-        <div>
-          {message}
-        </div>
-      )}
+            <Text className={"descriptionxx"} mt={30}>
+              Buy what you need, make the world better. For every product
+              purchased, a new plant is planted. It’s shopping that gives back
+              and creates a lasting difference. Together, we can make every
+              order count.
+            </Text>
 
-      {/* <Button onClick={() => dispatch(login({
-        loggedIn: true,
-        email: "lol",
-        username: "coder"
-      }))}>Login</Button> */}
+            <Button
+              variant="outline"
+              color="#ffffff"
+              size="xl"
+              className={"control"}
+              mt={20}
+              onClick={() => navigate("/explore")}
+            >
+              Get started
+            </Button>
+          </div>
+        </div>
+      </Container>
     </div>
-  )
+  );
 }
